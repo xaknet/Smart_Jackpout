@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{31F235CB-038A-4F48-BF17-07261F5A04D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Smart_Jackpout</RootNamespace>
+    <AssemblyName>Smart_Jackpout</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\Downloads\mysql-connector-net-6\mysql.data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="web.config" />
+    <Content Include="Default.aspx" />
+    <Content Include="img\countdownGlowing.gif" />
+    <Content Include="img\countdownLED.png" />
+    <Content Include="js\jquery.countdown-ar.js" />
+    <Content Include="js\jquery.countdown-bg.js" />
+    <Content Include="js\jquery.countdown-bn.js" />
+    <Content Include="js\jquery.countdown-bs.js" />
+    <Content Include="js\jquery.countdown-ca.js" />
+    <Content Include="js\jquery.countdown-cs.js" />
+    <Content Include="js\jquery.countdown-cy.js" />
+    <Content Include="js\jquery.countdown-da.js" />
+    <Content Include="js\jquery.countdown-de.js" />
+    <Content Include="js\jquery.countdown-el.js" />
+    <Content Include="js\jquery.countdown-es.js" />
+    <Content Include="js\jquery.countdown-et.js" />
+    <Content Include="js\jquery.countdown-fa.js" />
+    <Content Include="js\jquery.countdown-fi.js" />
+    <Content Include="js\jquery.countdown-fo.js" />
+    <Content Include="js\jquery.countdown-fr.js" />
+    <Content Include="js\jquery.countdown-gl.js" />
+    <Content Include="js\jquery.countdown-gu.js" />
+    <Content Include="js\jquery.countdown-he.js" />
+    <Content Include="js\jquery.countdown-hr.js" />
+    <Content Include="js\jquery.countdown-hu.js" />
+    <Content Include="js\jquery.countdown-hy.js" />
+    <Content Include="js\jquery.countdown-id.js" />
+    <Content Include="js\jquery.countdown-is.js" />
+    <Content Include="js\jquery.countdown-it.js" />
+    <Content Include="js\jquery.countdown-ja.js" />
+    <Content Include="js\jquery.countdown-kn.js" />
+    <Content Include="js\jquery.countdown-ko.js" />
+    <Content Include="js\jquery.countdown-lt.js" />
+    <Content Include="js\jquery.countdown-lv.js" />
+    <Content Include="js\jquery.countdown-ml.js" />
+    <Content Include="js\jquery.countdown-ms.js" />
+    <Content Include="js\jquery.countdown-my.js" />
+    <Content Include="js\jquery.countdown-nb.js" />
+    <Content Include="js\jquery.countdown-nl.js" />
+    <Content Include="js\jquery.countdown-pl.js" />
+    <Content Include="js\jquery.countdown-pt-BR.js" />
+    <Content Include="js\jquery.countdown-ro.js" />
+    <Content Include="js\jquery.countdown-ru.js" />
+    <Content Include="js\jquery.countdown-sk.js" />
+    <Content Include="js\jquery.countdown-sl.js" />
+    <Content Include="js\jquery.countdown-sq.js" />
+    <Content Include="js\jquery.countdown-sr-SR.js" />
+    <Content Include="js\jquery.countdown-sr.js" />
+    <Content Include="js\jquery.countdown-sv.js" />
+    <Content Include="js\jquery.countdown-th.js" />
+    <Content Include="js\jquery.countdown-tr.js" />
+    <Content Include="js\jquery.countdown-uk.js" />
+    <Content Include="js\jquery.countdown-ur.js" />
+    <Content Include="js\jquery.countdown-uz.js" />
+    <Content Include="js\jquery.countdown-vi.js" />
+    <Content Include="js\jquery.countdown-zh-CN.js" />
+    <Content Include="js\jquery.countdown-zh-TW.js" />
+    <Content Include="js\jquery.countdown.js" />
+    <Content Include="js\jquery.countdown.min.js" />
+    <Content Include="js\jquery.plugin.js" />
+    <Content Include="js\jquery.plugin.min.js" />
+    <Content Include="css\jquery.countdown.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Folder Include="js\" />
+    <Folder Include="img\" />
+    <Folder Include="css\" />
+  </ItemGroup>
+</Project>
